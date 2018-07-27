@@ -90,6 +90,18 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  created () {
+    this.$Axios({
+      methods: 'get',
+      url: '/user/list'
+    }).then((res) => {
+      console.log(res)
+    })
+  },
+  methods: {
+    test () {
+    }
   }
 }
 </script>

@@ -3,9 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Axios from './requestConfig/axios.js'
 
 Vue.config.productionTip = false
-
+Vue.prototype.$Axios = Axios
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
