@@ -24,6 +24,17 @@ module.exports = {
     // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-underscore-dangle': 'off',
+    camelcase: 'off',
+    'no-useless-escape': 'off',
+    'operator-linebreak': 'off',
+    'no-return-assign': 'off',
+    'no-useless-computed-key': 'off',
+    'no-mixed-operators': 'off',
+    'no-sequences': 'off',
+    'one-var': 'off',
+    'no-unneeded-ternary': 'off',
+    'vue/no-parsing-error': [2, { 'x-invalid-end-tag': false }]
   }
 }
