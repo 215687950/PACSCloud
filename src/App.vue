@@ -35,7 +35,7 @@
         </Sider>
         <Layout>
           <Content :style="{padding: '24px'}">
-            <router-view v-wechat-title="$route.meta.title"/>
+            <router-view/>
           </Content>
         </Layout>
       </Layout>

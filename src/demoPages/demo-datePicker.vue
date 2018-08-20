@@ -8,9 +8,6 @@ import DatePicker from '@/components/date-picker'
 export default {
   components: {
     DatePicker
-  },
-  mounted () {
-    console.log(1)
   }
 }
 </script>

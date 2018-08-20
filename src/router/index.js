@@ -4,10 +4,8 @@ import DemoButton from '@/demoPages/demo-button'
 import DemoInput from '@/demoPages/demo-input'
 import DemoSelect from '@/demoPages/demo-select'
 import DemoDatePicker from '@/demoPages/demo-datePicker'
-import wechatTitle from 'vue-wechat-title'
 
 Vue.use(Router)
-Vue.use(wechatTitle)
 
 export default new Router({
   routes: [
@@ -29,10 +27,7 @@ export default new Router({
     },
     {
       path: '/demoDatePicker',
-      component: DemoDatePicker,
-      meta: {
-        title: 'haha'
-      }
+      component: DemoDatePicker
     }
   ]
 })
