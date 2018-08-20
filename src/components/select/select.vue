@@ -188,9 +188,7 @@ export default {
       validator (value) {
         return oneOf(value, ['small', 'large', 'default'])
       },
-      default () {
-        return this.$IVIEW.size === '' ? 'default' : this.$IVIEW.size
-      }
+      default: 'default'
     },
     labelInValue: {
       type: Boolean,
@@ -207,9 +205,7 @@ export default {
     },
     transfer: {
       type: Boolean,
-      default () {
-        return this.$IVIEW.transfer === '' ? false : this.$IVIEW.transfer
-      }
+      default: false
     },
     // Use for AutoComplete
     autoComplete: {
