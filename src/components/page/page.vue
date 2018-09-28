@@ -27,7 +27,7 @@
   </ul>
   <ul :class="wrapClasses" :style="styles" v-else>
         <span :class="[prefixCls + '-total']" v-if="showTotal">
-            <slot>{{ t('i.page.total') }} {{ total }} <template v-if="total <= 1">{{ t('i.page.item') }}</template><template
+            <slot>{{ t('i.page.total') }} <span>{{ total }}</span> <template v-if="total <= 1">{{ t('i.page.item') }}</template><template
               v-else>{{ t('i.page.items') }}</template></slot>
         </span>
     <li
@@ -121,9 +121,7 @@ export default {
     },
     transfer: {
       type: Boolean,
-      default () {
-        return this.$IVIEW.transfer === '' ? false : this.$IVIEW.transfer
-      }
+      default: false
     },
     size: {
       validator (value) {

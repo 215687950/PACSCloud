@@ -25,9 +25,7 @@ export default {
       validator (value) {
         return oneOf(value, ['small', 'large', 'default'])
       },
-      default () {
-        return this.$IVIEW.size === '' ? 'default' : this.$IVIEW.size
-      }
+      default: 'default'
     },
     type: {
       validator (value) {

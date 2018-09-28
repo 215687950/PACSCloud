@@ -32,7 +32,7 @@
                                    :class="{on: getColumn(rowIndex, index)._sortType === 'desc'}"
                                    @click="handleSort(getColumn(rowIndex, index)._index, 'desc')"></i>
                             </span>
-            <Poptip
+            <!-- <Poptip
               v-if="isPopperShow(column)"
               v-model="getColumn(rowIndex, index)._filterVisible"
               placement="bottom"
@@ -77,7 +77,7 @@
                   </li>
                 </ul>
               </div>
-            </Poptip>
+            </Poptip> -->
           </template>
         </div>
       </th>

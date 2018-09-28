@@ -1,73 +1,70 @@
 <template>
   <div id="app">
-    <Layout class="demo">
-      <Header style="color: #ffffff;font-size: 26px">
-        <div>组件demo</div>
-      </Header>
-      <Layout>
-        <Sider hide-trigger :style="{background: '#fff'}">
-          <Menu active-name="2-3" theme="light" width="auto" :open-names="['1', '2', '3']">
-            <Submenu name="1">
-              <template slot="title">
-                <Icon type="ios-navigate"></Icon>
-                Basic
-              </template>
-              <MenuItem name="1-1" to="demoButton">Button</MenuItem>
-            </Submenu>
-            <Submenu name="2">
-              <template slot="title">
-                <Icon type="ios-keypad"></Icon>
-                Form
-              </template>
-              <MenuItem name="2-1" to="demoInput">Input</MenuItem>
-              <MenuItem name="2-2" to="demoSelect">Select</MenuItem>
-              <MenuItem name="2-3" to="demoDatePicker">DatePicker</MenuItem>
-            </Submenu>
-            <Submenu name="3">
-              <template slot="title">
-                <Icon type="ios-analytics"></Icon>
-                View
-              </template>
-              <MenuItem name="3-1">Option 1</MenuItem>
-              <MenuItem name="3-2">Option 2</MenuItem>
-            </Submenu>
-          </Menu>
-        </Sider>
-        <Layout>
-          <Content :style="{padding: '24px'}">
-            <router-view/>
-          </Content>
-        </Layout>
-      </Layout>
+    <Layout class="app-content">
+      <PageHeader></PageHeader>
+      <Content style="padding: 70px 0px 10px;overflow-y: hidden;">
+        <Breadcrumb separator=">">
+          <BreadcrumbItem v-for="(item, index) in breadcrumbs" :key="index">{{item.text}}</BreadcrumbItem>
+        </Breadcrumb>
+        <router-view/>
+      </Content>
     </Layout>
   </div>
 </template>
 
 <script>
 import Layout from '@/components/layout'
-import Header from '@/components/header'
-import Menu from '@/components/menu'
-import Sider from '@/components/sider'
+import PageHeader from '@/global/components/header'
 import Content from '@/components/content'
-import Icon from '@/components/icon'
+import Breadcrumb from '@/components/breadcrumb'
 export default {
   name: 'App',
   components: {
     Layout,
-    Header,
-    Menu,
-    MenuGroup: Menu.Group,
-    MenuItem: Menu.Item,
-    Submenu: Menu.Sub,
-    Sider,
+    PageHeader,
     Content,
-    Icon
+    Breadcrumb,
+    BreadcrumbItem: Breadcrumb.Item
+  },
+  data () {
+    return {
+      breadcrumbs: [
+        {
+          text: '数据共享',
+          link: ''
+        },
+        {
+          text: '患者列表',
+          link: ''
+        }
+      ]
+    }
   }
 }
 </script>
-
-<style>
-  #app, .demo {
-    height: 100%;
+<style lang="less">
+#app, .app-content {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  .ivu-layout-content {
+    display: flex;
   }
+  .ivu-breadcrumb {
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+  }
+  .ivu-breadcrumb-item-separator {
+    margin: 0 6px;
+    color: #d8d8d8;
+  }
+  .ivu-breadcrumb > span:last-child {
+    font-weight: normal;
+    color: #666666;
+  }
+}
 </style>

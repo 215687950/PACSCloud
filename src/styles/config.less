@@ -1,0 +1,121 @@
+// page content
+.page-content {
+  width: 100%;
+  min-width: 1280px;
+  padding: 0 20px;
+  position: relative;
+}
+// row box
+.row-box {
+  background: #FFFFFF;
+  box-shadow: 0 0 4px 0 rgba(126,126,126,0.60);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+.title-info {
+  width: 88px;
+  height: 20px;
+  line-height: 20px;
+  color: #ffffff;
+  background: #22B6A8;
+  text-align: center;
+}
+// search input
+.search-input {
+  input {
+    border: none;
+    border-bottom: 1px solid #22B6A8;
+  }
+}
+// table && page
+.pacs-table {
+  .ivu-table-wrapper {
+    border: none;
+    .ivu-table {
+      font-size: 14px;
+    }
+    .ivu-table:after {
+      width: 0;
+    }
+    .ivu-table th, .ivu-table td {
+      border: none;
+    }
+    .ivu-table th {
+      background: #ffffff;
+    }
+    .ivu-table-header {
+      position: relative;
+    }
+    .ivu-table-header:before {
+      content: '';
+      height: 1px;
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 0;
+      background-color: #22B6A8;
+      z-index: 1;
+    }
+    th .ivu-table-cell {
+      font-size: 14px;
+      color: #333333;
+    }
+    .ivu-table-stripe .ivu-table-body tr:nth-child(2n) td {
+      background: #eef5f3;
+    }
+    .ivu-table th {
+      height: 40px;
+    }
+    .ivu-table td {
+      height: 36px;
+    }
+  }
+  .ivu-page {
+    text-align: right;
+    margin-right: 20px;
+    height: 36px;
+    line-height: 36px;
+    .ivu-page-total span {
+      color: #22B6A8;
+    }
+    .ivu-page-prev, .ivu-page-next, .ivu-page-options-elevator input, .ivu-select-selection {
+      border: 1px solid #E6E6E6;
+    }
+    .ivu-page-prev,
+    .ivu-page-next,
+    .ivu-page-item-jump-prev,
+    .ivu-page-item-jump-next,
+    .ivu-page-item {
+      min-width: 25px;
+      height: 25px;
+      line-height: 23px;
+      border-radius: 0;
+      .ivu-icon {
+        color: #666666;
+      }
+    }
+    .ivu-page-item-active, .ivu-page-item:hover {
+      border-color: #22B6A8;
+      background: #DCF3F1;
+    }
+    .ivu-page-item-active a, .ivu-page-item:hover a {
+      color: #22B6A8;
+    }
+    .ivu-select-selection {
+      height: 25px;
+    }
+    .ivu-select-single .ivu-select-selection .ivu-select-selected-value {
+      height: 25px;
+      line-height: 25px;
+    }
+    .ivu-page-options-elevator input {
+      height: 25px;
+      border-radius: 0;
+    }
+    .ivu-page-options-elevator input:focus {
+      box-shadow: none;
+      border: 1px solid #22B6A8;
+    }
+  }
+}

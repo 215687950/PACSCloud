@@ -53,9 +53,7 @@ export default {
     },
     transfer: {
       type: Boolean,
-      default () {
-        return this.$IVIEW.transfer === '' ? false : this.$IVIEW.transfer
-      }
+      default: false
     }
   },
   computed: {

@@ -6,10 +6,10 @@
         text-align: right;
         vertical-align: middle;
         float: left;
-        font-size: @font-size-small;
-        color: @text-color;
+        font-size: @font-size-base;
+        color: #333333;
         line-height: 1;
-        padding: 10px 12px 10px 0;
+        padding: 10px 10px 10px 0;
         box-sizing: border-box;
     }
     &-label-left .@{form-item-prefix-cls}-label {
@@ -30,7 +30,9 @@
 }
 
 .@{form-item-prefix-cls} {
-    margin-bottom: 24px;
+    // margin-bottom: 24px;
+    margin-bottom: 0;
+    margin-right: 20px;
     vertical-align: top;
     .clearfix();
     &-content {

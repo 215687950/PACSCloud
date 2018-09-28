@@ -204,7 +204,7 @@ export default {
 
         if (index > 0) {
           let offset = 0
-          const gutter = this.size === 'small' ? 0 : 16
+          const gutter = this.size === 'small' ? 0 : 20
           for (let i = 0; i < index; i++) {
             offset += parseFloat(prevTabs[i].offsetWidth) + gutter
           }
