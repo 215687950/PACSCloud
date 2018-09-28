@@ -202,7 +202,7 @@ export default {
       showSlotHeader: true,
       showSlotFooter: true,
       bodyHeight: 0,
-      scrollBarWidth: getScrollBarSize(),
+      scrollBarWidth: getScrollBarSize() - 6,
       currentContext: this.context,
       cloneData: deepCopy(this.data), // when Cell has a button to delete row data, clickCurrentRow will throw an error, so clone a data
       showVerticalScrollBar: false,

@@ -81,6 +81,17 @@
     &-overflowY{
         overflow-y: scroll;
     }
+    &-overflowY::-webkit-scrollbar, &-overflowX::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    &-overflowY::-webkit-scrollbar-track, &-overflowX::-webkit-scrollbar-track { 
+        background: #fff; 
+    }
+    &-overflowY::-webkit-scrollbar-thumb, &-overflowX::-webkit-scrollbar-thumb { 
+        border-radius: 10px;
+        background: #c1c1c1;
+    }
     &-tip{
         overflow-x: auto;
         overflow-y: hidden;

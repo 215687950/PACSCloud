@@ -149,6 +149,17 @@ export default {
       padding: 4px;
       background: #E5F4F3;
     }
+    .text-box::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    .text-box::-webkit-scrollbar-track {
+      background: #fff;
+    }
+    .text-box::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: #c1c1c1;
+    }
   }
   .register-details {
     overflow: auto;
